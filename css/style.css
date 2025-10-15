@@ -1,0 +1,171 @@
+/* theme-vintage.css - Tema "Biblioteca Antiga" (Versão Otimizada) */
+
+/* =================================== */
+/* 1. Definição de Variáveis Globais   */
+/* =================================== */
+
+:root {
+    /* Paleta de Cores */
+    --cor-fundo-pagina: #fdf6e3;
+    --cor-fundo-conteudo: #faf3e8;
+    --cor-primaria-escura: #58391c;  /* Marrom escuro (header/footer) */
+    --cor-primaria-media: #855a35;   /* Marrom médio (nav/botões) */
+    --cor-texto-principal: #4f4234;
+    --cor-texto-claro: #fdf6e3;
+    --cor-dourado-destaque: #e4b974;
+    --cor-borda-sutil: #dcd1c1;
+    --cor-borda-dupla: #d3c0a5;
+
+    /* Tipografia */
+    --fonte-corpo: 'Lora', serif;
+    --fonte-titulo: 'Playfair Display', serif;
+}
+
+
+/* =================================== */
+/* 2. Reset Básico e Padrões Globais   */
+/* =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-texto-principal);
+    line-height: 1.7;
+}
+
+/* =================================== */
+/* 3. Layout Principal                 */
+/* =================================== */
+
+header, footer {
+    background: var(--cor-primaria-escura);
+    padding: 25px 0;
+    text-align: center;
+}
+
+header {
+    color: var(--cor-texto-claro);
+    padding-top: 30px;
+    border-bottom: 4px double var(--cor-borda-dupla);
+}
+  
+nav {
+    background: var(--cor-primaria-media);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+  
+main {
+    max-width: 1100px;
+    margin: 0 auto 30px auto;
+    padding: 35px;
+    background: var(--cor-fundo-conteudo);
+    border: 1px solid var(--cor-borda-sutil);
+    box-shadow: none; 
+}
+  
+footer {
+    color: var(--cor-borda-dupla);
+    border-top: 4px double var(--cor-borda-dupla);
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+  
+/* =================================== */
+/* 4. Estilos de Texto e Links         */
+/* =================================== */
+
+h1, h2, th, button[type="submit"] {
+    font-family: var(--fonte-titulo);
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+}
+  
+h2 {
+    color: var(--cor-primaria-escura);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cor-borda-sutil);
+}
+
+main p {
+    margin-bottom: 15px;
+    max-width: 75ch;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 8px 12px;
+    border-radius: 0;
+    transition: all 0.3s;
+}
+  
+nav a:hover {
+    background-color: var(--cor-primaria-escura);
+    color: #923939;
+}
+  
+nav b {
+    color: var(--cor-dourado-destaque);
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+  
+/* =================================== */
+/* 5. Estilos Específicos por Página   */
+/* =================================== */
+  
+th {
+    background-color: var(--cor-primaria-media);
+    color: var(--cor-texto-claro);
+}
+
+main ul li {
+    background: var(--cor-fundo-pagina);
+    border-left: 5px solid var(--cor-primaria-media);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+  
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-borda-sutil);
+    border-radius: 0;
+    background-color: #fff;
+    font-family: var(--fonte-corpo);
+}
+  
+button[type="submit"] {
+    background-color: var(--cor-primaria-media);
+    color: white;
+    padding: 12px 25px;
+    border: 1px solid var(--cor-primaria-escura);
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s;
+}
+  
+button[type="submit"]:hover {
+    background-color: var(--cor-primaria-escura);
+}
