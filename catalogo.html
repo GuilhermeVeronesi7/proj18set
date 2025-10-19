@@ -21,68 +21,62 @@
     <main>
         <h2>Livros em Destaque</h2>
         <p> Lista do Ranking Best Sellers 2025</p>
-        <div id="mensagem-destaque">
-            Confira nossa seleção especial de best sellers!
-        </div>
-        <table border="1"> 
-            <thead>
-                <tr>
-                    <th>Capa</th>
-                    <th>Título</th>
-                    <th>Gênero</th>
-                    <th>Editora</th>
-                    <th>Nome do Autor</th>
-                </tr>
-            </thead>
-            <tr class="destaque-livro">
-                <td data-label="Capa"><img src="img/livro2041.jpg" alt="Capa do livro 2041" width="70"></td>
-                <td data-label="Título">2041: Como a inteligência artificial vai mudar sua vida nas próximas décadas</td>
-                <td data-label="Gênero">Profissional e técnico</td>
-                <td data-label="Editora">Globo Livros</td>
-                <td data-label="Autor">Chen Qiufan</td>
-            </tr>
-            <tr class="destaque-livro">
-                <td data-label="Capa"><img src="img/ent_algoritmos.jpg" alt="Capa do livro Entendendo algoritmos" width="70"></td>
-                <td data-label="Título">Entendendo Algoritmos</td>
-                <td data-label="Gênero">Programação de Computadores</td>
-                <td data-label="Editora">Novatec</td>
-                <td data-label="Autor">Aditya Bhargava</td>
-            </tr>
-            <tr class="destaque-livro">
-                <td data-label="Capa"><img src="img/codigo_limpo.jpg" alt="Capa do livro Código limpo" width="70"></td>
-                <td data-label="Título">Código Limpo: Habilidades Práticas do Agile Software</td>
-                <td data-label="Gênero">Programação de Computadores</td>
-                <td data-label="Editora">Alta Books</td>
-                <td data-label="Autor">Robert C. Martin</td>
-            </tr>
-            <tr class="destaque-livro">
-                <td data-label="Capa"><img src="img/prog_autodidata.jpg" alt="Capa do livro Programador autodidata" width="70"></td>
-                <td data-label="Título">Programador Autodidata: Guia definitivo para programar profissionalmente</td>
-                <td data-label="Gênero">Programação de Computadores</td>
-                <td data-label="Editora">Novatec</td>
-                <td data-label="Autor">Cory Althoff</td>
-            </tr>
-            <tr class="destaque-livro">
-                <td data-label="Capa"><img src="img/Prog_utiliz_ia.jpg" alt="Capa do livro Programação utilizando IA" width="70"></td>
-                <td data-label="Título">Programação Utilizando IA: Otimizando as etapas de planejamento, programação, testes e implantação</td>
-                <td data-label="Gênero">Programação de Computadores</td>
-                <td data-label="Editora">Novatec</td>
-                <td data-label="Autor">Tom Taulli</td>
-            </tr>
-
-        </table>        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Capa</th>
+                        <th>Título</th>
+                        <th>Gênero</th>
+                        <th>Editora</th>
+                        <th>Nome do Autor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="destaque-livro">
+                        <td><img src="img/livro2041.jpg" alt="Capa do livro 2041"></td>
+                        <td>2041: Como a inteligência artificial vai mudar sua vida nas próximas décadas</td>
+                        <td>Profissional e técnico</td>
+                        <td>Globo Livros</td>
+                        <td>Chen Qiufan</td>
+                    </tr>
+                    <tr class="destaque-livro">
+                        <td><img src="img/ent_algoritmos.jpg" alt="Capa do livro Entendendo algoritmos"></td>
+                        <td>Entendendo Algoritmos</td>
+                        <td>Programação de Computadores</td>
+                        <td>Novatec</td>
+                        <td>Aditya Bhargava</td>
+                    </tr>
+                    <tr class="destaque-livro">
+                        <td><img src="img/codigo_limpo.jpg" alt="Capa do livro Código limpo"></td>
+                        <td>Código Limpo: Habilidades Práticas do Agile Software</td>
+                        <td>Programação de Computadores</td>
+                        <td>Alta Books</td>
+                        <td>Robert C. Martin</td>
+                    </tr>
+                    <tr class="destaque-livro">
+                        <td><img src="img/prog_autodidata.jpg" alt="Capa do livro Programador autodidata"></td>
+                        <td>Programador Autodidata: Guia definitivo para programar profissionalmente</td>
+                        <td>Programação de Computadores</td>
+                        <td>Novatec</td>
+                        <td>Cory Althoff</td>
+                    </tr>
+                    <tr class="destaque-livro">
+                        <td><img src="img/Prog_utiliz_ia.jpg" alt="Capa do livro Programação utilizando IA"></td>
+                        <td>Programação Utilizando IA: Otimizando as etapas de planejamento, programação, testes e implantação</td>
+                        <td>Programação de Computadores</td>
+                        <td>Novatec</td>
+                        <td>Tom Taulli</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
     </main>
 </body>
-    <footer>
-
-           <div>
-            <p>
-                © 2025 Bookfy. Todos os direitos reservados.
-            </p>
-            <p>
-                Este projeto é uma ferramenta educacional e não comercial. As informações e imagens de livros são utilizadas para fins de demonstração, aprendizado e ilustração de conceitos de desenvolvimento web.
-            </p>
-        </div>
-
-           </footer>
+<footer>
+    <div>
+        <p>© 2025 Bookfy. Todos os direitos reservados.</p>
+        <p>Este projeto é uma ferramenta educacional e não comercial. As informações e imagens de livros são utilizadas para fins de demonstração.</p>
+    </div>
+</footer>
 </html>
