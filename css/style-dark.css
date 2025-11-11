@@ -1,0 +1,303 @@
+/* 3a. Este é o seu novo tema escuro.
+   Ele é uma cópia do style.css, mas com as variáveis de cor :root invertidas.
+*/
+:root {
+    /* Cores invertidas para o tema escuro */
+    --cor-fundo-pagina: #2a231c; /* Marrom bem escuro */
+    --cor-fundo-conteudo: #3a312a; /* Marrom escuro */
+    --cor-primaria-escura: #d4a96a; /* Dourado (era escuro, ficou claro) */
+    --cor-primaria-media: #b58a55; /* Marrom médio-claro */
+    --cor-texto-principal: #fdf6e3; /* Texto claro (era escuro) */
+    --cor-texto-claro: #2a231c; /* Texto escuro (era claro) */
+    --cor-dourado-destaque: #e4b974; /* Mantém o dourado */
+    --cor-borda-sutil: #584939; /* Borda mais escura */
+  }
+  
+  /* COPIE E COLE ABAIXO *TODO* O RESTANTE DO SEU ARQUIVO style.css
+    (Da linha ' * { ' até o final)
+    
+    Isso é necessário para que o tema escuro tenha a mesma estrutura,
+    apenas mudando as cores definidas no :root acima.
+  */
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'Lora', serif;
+      background-color: var(--cor-fundo-pagina);
+      color: var(--cor-texto-principal);
+      line-height: 1.5;
+  }
+  
+  /* ========== LAYOUT BÁSICO ========== */
+  header, footer {
+      background: var(--cor-primaria-escura);
+      padding: 1rem;
+      text-align: center;
+      color: var(--cor-texto-claro);
+  }
+  
+  header {
+      border-bottom: 3px double var(--cor-dourado-destaque);
+      position: relative; /* Adicionado para o botão de tema */
+  }
+  
+  footer {
+      border-top: 3px double var(--cor-dourado-destaque);
+      font-size: 0.8em;
+  }
+  
+  nav {
+      background: var(--cor-primaria-media);
+      padding: 0.5rem;
+      text-align: center;
+  }
+  
+  main {
+      padding: 1rem;
+      background: var(--cor-fundo-conteudo);
+      margin: 1rem;
+      border: 1px solid var(--cor-borda-sutil);
+  }
+  
+  /* ========== TIPOGRAFIA ========== */
+  h1, h2, button {
+      font-family: 'Playfair Display', serif;
+  }
+  
+  h1 {
+      font-size: 1.4em;
+      margin-bottom: 1rem;
+  }
+  
+  h2 {
+      font-size: 1.2em;
+      color: var(--cor-primaria-escura);
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--cor-borda-sutil);
+      padding-bottom: 0.5rem;
+  }
+  
+  p {
+      margin-bottom: 1rem;
+  }
+  
+  /* ========== NAVEGAÇÃO MOBILE ========== */
+  nav a, nav b {
+      display: block;
+      color: var(--cor-texto-claro);
+      text-decoration: none;
+      padding: 0.8rem;
+      margin: 0.2rem 0;
+      font-weight: bold;
+  }
+  
+  nav a:hover {
+      background-color: var(--cor-primaria-escura);
+  }
+  
+  nav b {
+      background-color: var(--cor-primaria-escura);
+      color: var(--cor-dourado-destaque);
+  }
+  
+  /* ========== COMPONENTES ========== */
+  .form-container {
+      background: var(--cor-fundo-pagina);
+      padding: 1rem;
+      border: 1px solid var(--cor-borda-sutil);
+      margin: 1rem 0;
+  }
+  
+  #mensagem-destaque {
+      font-style: italic;
+      background: var(--cor-fundo-pagina);
+      padding: 1rem;
+      border: 1px dashed var(--cor-dourado-destaque);
+      margin: 1rem 0;
+      text-align: center;
+  }
+  
+  ul {
+      padding-left: 1rem;
+  }
+  
+  li {
+      margin-bottom: 0.8rem;
+      padding: 0.8rem;
+      background: var(--cor-fundo-pagina);
+      border-left: 4px solid var(--cor-primaria-media);
+  }
+  
+  label {
+      display: block;
+      font-weight: bold;
+      margin: 0.5rem 0 0.2rem 0;
+  }
+  
+  input[type="text"], textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid var(--cor-borda-sutil);
+      font-family: 'Lora', serif;
+      /* Adiciona estilo para tema escuro */
+      background-color: var(--cor-fundo-pagina);
+      color: var(--cor-texto-principal);
+  }
+  
+  textarea {
+      min-height: 100px;
+      resize: vertical;
+  }
+  
+  button[type="submit"] {
+      background: var(--cor-primaria-media);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      font-family: 'Playfair Display', serif;
+      margin-top: 0.5rem;
+      width: 100%;
+  }
+  
+  /* ========== TABELA RESPONSIVA ========== */
+  .table-container {
+      width: 100%;
+      overflow-x: auto;
+  }
+  
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px; /* Garante que a tabela não quebre */
+  }
+  
+  th, td {
+      padding: 0.8rem;
+      border: 1px solid var(--cor-borda-sutil);
+      text-align: left;
+  }
+  
+  th {
+      background-color: var(--cor-primaria-media);
+      color: var(--cor-texto-claro);
+      font-weight: bold;
+  }
+  
+  .destaque-livro td {
+      background-color: var(--cor-fundo-pagina);
+  }
+  
+  img {
+      max-width: 70px;
+      border: 1px solid var(--cor-borda-sutil);
+  }
+  
+  /* ========== MEDIA QUERIES ========== */
+  
+  /* TABLET */
+  @media (min-width: 768px) {
+      h1 { font-size: 2em; }
+      h2 { font-size: 1.5em; }
+      
+      nav a, nav b {
+          display: inline-block;
+          margin: 0 0.5rem;
+      }
+      
+      button[type="submit"] {
+          width: auto;
+      }
+      
+      main {
+          margin: 1rem auto;
+          max-width: 95%;
+      }
+  }
+  
+  /* COMPUTADOR */
+  @media (min-width: 1024px) {
+      h1 { font-size: 2.5em; }
+      h2 { font-size: 1.8em; }
+      
+      main {
+          max-width: 1000px;
+          padding: 2rem;
+      }
+      
+      nav a, nav b {
+          padding: 1rem 1.5rem;
+      }
+      
+      .table-container {
+          overflow-x: visible;
+      }
+      
+      table {
+          min-width: auto;
+      }
+  }
+  
+  /* TV */
+  @media (min-width: 1440px) {
+      h1 { font-size: 3em; }
+      h2 { font-size: 2.2em; }
+      
+      main {
+          max-width: 1200px;
+          padding: 2.5rem;
+      }
+      
+      body {
+          font-size: 1.1em;
+      }
+      
+      th, td {
+          padding: 1.2rem;
+      }
+  }
+  
+  /* ========== ESTILOS ADICIONADOS PARA JS ========== */
+  
+  /* Botão de Tema */
+  #theme-toggle {
+    background: var(--cor-dourado-destaque);
+    color: var(--cor-primaria-escura);
+    border: 1px solid var(--cor-primaria-escura);
+    padding: 0.5rem 0.8rem;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  @media (min-width: 768px) {
+    #theme-toggle {
+      position: absolute; /* OK no desktop */
+      top: 1.5rem;
+      right: 1.5rem;
+      margin-top: 0;
+    }
+  }
+  
+  /* Mensagens de Status (SAC) */
+  #status-message {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  /* Cores específicas para o tema escuro */
+  .message-success {
+    background-color: #155724; /* Verde escuro */
+    color: #d4edda; /* Texto claro */
+    border: 1px solid #c3e6cb;
+  }
+  .message-error {
+    background-color: #721c24; /* Vermelho escuro */
+    color: #f8d7da; /* Texto claro */
+    border: 1px solid #f5c6cb;
+  }

@@ -1,0 +1,37 @@
+[
+    {
+    "capa": "img/livro2041.jpg",
+    "titulo": "2041: Como a inteligência artificial vai mudar sua vida nas próximas décadas",
+    "genero": "Profissional e técnico",
+    "editora": "Globo Livros",
+    "autor": "Chen Qiufan"
+    },
+    {
+    "capa": "img/ent_algoritmos.jpg",
+    "titulo": "Entendendo Algoritmos",
+    "genero": "Programação de Computadores",
+    "editora": "Novatec",
+    "autor": "Aditya Bhargava"
+    },
+    {
+    "capa": "img/codigo_limpo.jpg",
+    "titulo": "Código Limpo: Habilidades Práticas do Agile Software",
+    "genero": "Programação de Computadores",
+    "editora": "Alta Books",
+    "autor": "Robert C. Martin"
+    },
+    {
+    "capa": "img/prog_autodidata.jpg",
+    "titulo": "Programador Autodidata: Guia definitivo para programar profissionalmente",
+    "genero": "Programação de Computadores",
+    "editora": "Novatec",
+    "autor": "Cory Althoff"
+    },
+    {
+    "capa": "img/Prog_utiliz_ia.jpg",
+    "titulo": "Programação Utilizando IA: Otimizando as etapas de planejamento, programação, testes e implantação",
+    "genero": "Programação de Computadores",
+    "editora": "Novatec",
+    "autor": "Tom Taulli"
+    }
+    ]

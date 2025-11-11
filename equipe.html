@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 3c. Link do CSS agora tem um ID -->
+    <link id="theme-style" rel="stylesheet" href="css/style.css">
+    
     <title>Equipe</title>
 </head>
 <body>
@@ -13,6 +16,8 @@
     <h1>
         Nome dos desenvolvedores desse web site
     </h1>
+    <!-- 3d. Botão de trocar o tema -->
+    <button id="theme-toggle">Mudar Tema</button>
 </header>
     <nav>
         <a href="index.html">Home</a>
@@ -38,4 +43,7 @@
         <p>Este projeto é uma ferramenta educacional e não comercial. As informações e imagens de livros são utilizadas para fins de demonstração.</p>
     </div>
 </footer>
+
+<!-- 3e. Script do tema (carregado em todas as páginas) -->
+<script src="js/theme.js" defer></script>
 </html>

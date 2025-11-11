@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 3c. Link do CSS agora tem um ID -->
+    <link id="theme-style" rel="stylesheet" href="css/style.css">
+    
     <title>Bookfy</title>
 </head>
 <body>
     <header>
         <h1>Bookfy Sua biblioteca virtual</h1>
+        <!-- 3d. Botão de trocar o tema -->
+        <button id="theme-toggle">Mudar Tema</button>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -20,20 +25,36 @@
     </nav>
     <main>
         <h2>Serviço de Atendimento ao Cliente</h2>
-            <p id="mensagem-destaque">
-                Você pode enviar uma mensagem no formulário abaixo!
-            </p>
-        <form action="" method="post">
+        
+        <!-- Usei o ID que o professor mencionou -->
+        <p id="mensagem-destaque">
+            Você pode enviar uma mensagem no formulário abaixo!
+        </p>
+
+        <!-- 1c. Adicionado ID ao formulário para o JS -->
+        <form action="" method="post" id="sac-form">
             <label for="id_nome">Nome do Cliente:</label><br>
             <input type="text" name="nome" id="id_nome"><br><br>
+            
             <label for="id_email">E-mail do Cliente: </label><br>
             <input type="text" name="email" id="id_email"><br><br>
+            
+            <!-- 1b. Novo campo CPF adicionado -->
+            <label for="id_cpf">CPF:</label><br>
+            <input type="text" name="cpf" id="id_cpf" placeholder="999.999.999-99"><br><br>
+            
             <label for="id_assunto">Assunto: </label><br>
             <textarea name="assunto" id="id_assunto"></textarea><br><br>
+            
             <label for="id_mensagem">Mensagem:</label><br>
             <textarea name="mensagem" id="id_mensagem"></textarea><br><br>
+            
             <button type="submit">Enviar</button>
         </form>
+
+        <!-- Nova Div para mostrar mensagens de sucesso ou erro -->
+        <div id="status-message"></div>
+
     </main>
 </body>
 <footer>
@@ -42,4 +63,14 @@
         <p>Este projeto é uma ferramenta educacional e não comercial. As informações e imagens de livros são utilizadas para fins de demonstração.</p>
     </div>
 </footer>
+
+<!-- 
+  Scripts carregados no final
+  defer = espera o HTML carregar antes de executar
+-->
+<!-- 3e. Script do tema -->
+<script src="js/theme.js" defer></script>
+<!-- 1d. Script de validação (somente nesta página) -->
+<script src="js/validacao.js" defer></script>
+
 </html>
