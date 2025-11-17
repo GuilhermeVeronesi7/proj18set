@@ -1,0 +1,5 @@
+<nav>
+<a href="index.php">Home</a> |
+<a href="catalogo.php">Catálogo</a> |
+<a href="sac.php">SAC</a>
+</nav>
