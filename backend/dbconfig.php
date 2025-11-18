@@ -1,9 +1,9 @@
 <?php
 $host = '127.0.0.1';
 $port = '3306';
-$db = 'meu_catalogo';
+$db = 'bookfy';
 $user = 'root';
-$pass = 'mysql123';
+$pass = '';
 
 
 try {
