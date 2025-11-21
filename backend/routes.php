@@ -2,6 +2,7 @@
 // backend/routes.php
 
 function processRequest($pdo, $resource, $method, $id, $dados) {
+    // Verifica se o recurso é válido
     if ($resource !== 'livros') {
         http_response_code(404);
         echo json_encode(["erro" => "Recurso não encontrado."]);
@@ -10,12 +11,13 @@ function processRequest($pdo, $resource, $method, $id, $dados) {
 
     switch ($method) {
         case 'GET':
-            // Chama a função de leitura
+            // Ler Livros
             $resultado = readLivros($pdo, $id);
             echo json_encode($resultado);
             break;
 
         case 'POST':
+            // Criar Livro
             if ($id) {
                 http_response_code(405);
                 echo json_encode(["erro" => "POST não aceita ID na URL."]);
@@ -26,23 +28,26 @@ function processRequest($pdo, $resource, $method, $id, $dados) {
             break;
 
         case 'PUT':
+            // Atualizar Livro
             if (!$id) {
                 http_response_code(400);
                 echo json_encode(["erro" => "ID obrigatório no PUT."]);
-            } else {
-                $resultado = updateLivro($pdo, $id, $dados);
-                echo json_encode($resultado);
+                exit;
             }
-            break; // <--- O erro estava aqui (adicionei o ;)
+            // Chama a função de update e retorna o resultado direto
+            $resultado = updateLivro($pdo, $id, $dados);
+            echo json_encode($resultado);
+            break; // <--- O ERRO ESTAVA AQUI (Adicionei o ;)
 
         case 'DELETE':
+            // Deletar Livro
             if (!$id) {
                 http_response_code(400);
                 echo json_encode(["erro" => "ID obrigatório no DELETE."]);
-            } else {
-                $resultado = deleteLivro($pdo, $id);
-                echo json_encode($resultado);
+                exit;
             }
+            $resultado = deleteLivro($pdo, $id);
+            echo json_encode($resultado);
             break;
 
         default:
